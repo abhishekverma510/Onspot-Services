@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: 0000FF;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+</style>
+    <script type="text/javascript">
+      function validate()
+      {
+        var name=document.getElementById("fname").value;
+        var lname=document.getElementById("lname").value;
+        var email=document.getElementById("email").value;
+        var passwd=document.getElementById("passwd").value;
+        var cpasswd=document.getElementById("cpasswd").value;
+        alert(name);
+        if (name=="") 
+        {
+          document.getElementById("span_fname").innerHTML="**Name is mandatory**";
+          return false;
+        }
+         
+        if (lname=="") 
+        {
+          document.getElementById("span_mobile").innerHTML="**please enter mobile no.**";
+          return false;
+        }
+
+        if (email=="") 
+        {
+          document.getElementById("span_email").innerHTML="**pls enter email id**";
+          return false;
+        }
+
+        if (passwd=="" | passwd==null) 
+        {
+          document.getElementById("span_passwd").innerHTML="**pls enter password**";
+          return false;
+        }
+
+  if (cpasswd=="" | cpasswd==null) 
+        {
+          document.getElementById("span_cpasswd").innerHTML="**pls enter password**";
+          return false;
+        }
+
+         if (passwd != cpasswd)
+         {
+           document.getElementById('span_cpasswd').innerHTML="**password not matched**";
+          return false;
+         }
+
+      }
+    </script>
+</head>
+<body>
+<link rel="stylesheet" href="css/style.css">  <!-- To link external css name of page is style.css -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>  <!-- bootstrap css link is here  -->
+<body>   
+<section id="nav-bar">
+  <nav class="navbar navbar-expand-lg navbar-light">  <!-- Bootstrap navbar using in this code by its oofical sites  -->
+  <a class="navbar-brand" href="#"><img src="IMAGES/onspot.gif"></a> <!-- here is our onspot image logo by uing img tag -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">  <!-- All the menu are align to right side  -->
+      <li class="nav-item active">   <!-- Active also be remove -->
+        <a class="nav-link" href="home_new1.html">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="ourservices.html">SERVICES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="feedback.html">FEEDBACK</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="teamfinal.html">ABOUT US</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</section>
+ 
+<div class="container">
+  <div style="text-align:center">
+    <h2 id="myDIV" style="color:#5D6D7E;">Register Here!!!</h2>
+    <h1>ON SPOT SERVICE</h1>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="column">
+      <img src="IMAGES/onspot1.png" style="width:100%" height="75%">
+    </div>
+    <div class="column"> 
+      <form action="db_sregistration.php" method="POST" onsubmit="return validate()">
+
+        <label for="fname"  style="color:#E74C3C;">Name</label>  
+        <input type="text" id="fname" name="name" placeholder="Your name..">
+        <span id="span_fname"></span><br>
+
+        <label for="lname" style="color:#E74C3C ;">mobile</label>
+        <input type="text" id="lname" name="mobile" placeholder="Your Mobile..">
+         <span id="span_mobile"></span><br>
+	
+
+        <label for="lname" style="color:#E74C3C  ;">email id</label>
+        <input type="text" id="email" name="emailid" placeholder="Your Email id..">
+         <span id="span_email"></span><br>
+
+        <label for="country" style="color:#E74C3C;">Password</label>
+        <input type="text" id="passwd" name="pass" placeholder="Your password.."> 
+         <span id="span_passwd"></span><br>
+
+        <label for="country" style="color:#E74C3C;">Confirm Password</label>
+        <input type="text" id="cpasswd" name="cpass" placeholder="Confirm password.."> <br>
+        <span id="span_cpasswd"></span><br>
+        
+        
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

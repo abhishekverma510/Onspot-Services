@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: 0000FF;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+</style>
+    <script type="text/javascript">
+      function validate()
+      {
+        var lname=document.getElementById("lname").value;
+        var special=document.getElementById("special").value;
+        alert(name);
+        if (lname=="") 
+        {
+          document.getElementById("span_mobile").innerHTML="**please enter your name**";
+          return false;
+        }
+        if (special=="") 
+        {
+          document.getElementById("span_special").innerHTML="please enter your service specilazation!!";
+          return false;
+        } 
+      }
+    </script>
+</head>
+<body>
+<link rel="stylesheet" href="css/style.css">  <!-- To link external css name of page is style.css -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>  <!-- bootstrap css link is here  -->
+<body>   
+<section id="nav-bar">
+  <nav class="navbar navbar-expand-lg navbar-light">  <!-- Bootstrap navbar using in this code by its oofical sites  -->
+  <a class="navbar-brand" href="#"><img src="IMAGES/onspot.gif"></a> <!-- here is our onspot image logo by uing img tag -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">  <!-- All the menu are align to right side  -->
+      <li class="nav-item active">   <!-- Active also be remove -->
+        <a class="nav-link" href="home_new1.html">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">SERVICES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CONTACT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">FEEDBACK</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">ABOUT US</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</section>
+ 
+<div class="container">
+  <div style="text-align:center">
+    <h2 id="myDIV" style="color:#5D6D7E;">ON SPOT SERVICE</h2>
+    <h1>REQUEST SERVICE </h1>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="column">
+	  <marquee  width="90%" height="37%" behavior="scroll" direction="up" scrollamount="8" >
+	  <h2 style="color:#193f75">Electrician</h2>
+      <img src="IMAGES/elel1.jpg" style="width:100%">
+	  <h2 style="color:#193f75">Mechanics</h2>
+	  <img src="IMAGES/mech1.jpg" style="width:100%">
+	  <h2 style="color:#193f75">Carpenter</h2>
+	  <img src="IMAGES/carp1.jpg" style="width:100%">
+	  </marquee>
+    </div>
+    <div class="column"> 
+      <form action="db_service.php" method="POST" onsubmit="return validate()">
+
+         <label for="lname" style="color:#E74C3C ;">mobile</label>
+        <input type="text" id="lname" name="mobile" placeholder="Your Mobile..">
+         <span id="span_mobile"></span><br>
+		 
+        <label for="country" style="color:#E74C3C;">SERVICE TYPE</label>
+		<select id="passwd" name="stype">
+		   <option>Mechanics</option>
+		   <option>Electrician</option>
+		   <option>Carpenter</option>
+		</select>  
+
+         <label for="country" style="color:#E74C3C;">SPECIALIZATION</label>
+        <input type="text" id="special" name="special" placeholder="Enter service specilazation.."> 
+         <span id="span_special"></span><br>
+		 
+        <input type="submit" value="Submit">
+		
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
