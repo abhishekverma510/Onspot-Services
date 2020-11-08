@@ -26,4 +26,4 @@ The objective of our proposed system is:
 4. For further implementation part or database structure part, you can access my report via https://drive.google.com/file/d/1N86q21OjRth7vyX08hgs_2qgYHNZnbMs/view?usp=sharing
 
 # Screenshots
- ![alt tag]{https://github.com/abhishekverma510/Onspot-Services/blob/main/Screenshot%20(13).png}
+ ![alt tag](https://github.com/abhishekverma510/Onspot-Services/blob/main/Screenshot%20(13).png)
