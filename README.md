@@ -30,3 +30,19 @@ The objective of our proposed system is:
  
  ------------------------------------------------------------------------------------------------
  ![alt tag](https://github.com/abhishekverma510/Onspot-Services/blob/main/Screenshot%20(14).png)
+ 
+ -------------------------------------------------------------------------------------------------
+ 
+ ![alt tag](https://github.com/abhishekverma510/Onspot-Services/blob/main/Screenshot%20(15).png)
+ 
+ -------------------------------------------------------------------------------------------------
+ 
+ ![alt tag](https://github.com/abhishekverma510/Onspot-Services/blob/main/Screenshot%20(16).png)
+ 
+ -----------------------------------------------------------------------------------------------
+ 
+ ![alt tag](https://github.com/abhishekverma510/Onspot-Services/blob/main/Screenshot%20(17).png)
+ 
+ ------------------------------------------------------------------------------------------------
+ 
+ ![alt tag](https://github.com/abhishekverma510/Onspot-Services/blob/main/Screenshot%20(18).png)
