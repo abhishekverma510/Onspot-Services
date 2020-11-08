@@ -24,3 +24,6 @@ The objective of our proposed system is:
 2. Google Chrome
 3. You need to create a similar database structure as mine. 
 4. For further implementation part or database structure part, you can access my report via https://drive.google.com/file/d/1N86q21OjRth7vyX08hgs_2qgYHNZnbMs/view?usp=sharing
+
+# Screenshots
+ ![alt tag]{
